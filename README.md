@@ -1,4 +1,6 @@
-This is 3rd party code that we need, it can not build individually, therefore it is depend on 'Makefile' from  project's 'SSTAR_OTA' or 'amigos_customer'
+This is 3rd party code that we need, it can not build individually, therefore it is depend on 'Makefile' from  project's 'SSTAR_OTA' or 'amigos_customer'.
+
+
 Version:
 
 	libjpeg: http://www.ijg.org/files/jpegsrc.v9d.tar.gz
