@@ -12,7 +12,6 @@ all:
 	mkdir -p $(OUT_PATH)
 	tar -vxf wpa_supplicant-2.9.tar.gz -C $(OUT_PATH)
 	cd $(OUT_PATH)/wpa_supplicant-2.9/wpa_supplicant;	\
-	mkdir -p $(OUT_PATH)/bin;	\
 	$(MAKE) CC=$(TOOLCHAIN_REL)gcc && $(MAKE) install BINDIR=$(shell pwd)/bin;	\
 	cd -;
 	mkdir -p $(shell pwd)/bin

@@ -14,3 +14,7 @@ Version:
 	libnl: https://github.com/thom311/libnl/releases/download/libnl3_5_0/libnl-3.5.0.tar.gz
 
 	wpa_supplicant: https://w1.fi/releases/wpa_supplicant-2.9.tar.gz (With customized .config file.)
+
+	wireless_tools: https://hewlettpackard.github.io/wireless-tools/wireless_tools.29.tar.gz
+
+	hostapd: https://w1.fi/releases/hostapd-2.9.tar.gz
