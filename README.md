@@ -18,3 +18,5 @@ Version:
 	wireless_tools: https://hewlettpackard.github.io/wireless-tools/wireless_tools.29.tar.gz
 
 	hostapd: https://w1.fi/releases/hostapd-2.9.tar.gz
+
+	dnsmasq: http://www.thekelleys.org.uk/dnsmasq/dnsmasq-2.82.tar.gz
