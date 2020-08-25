@@ -9,10 +9,10 @@ all:
 	./configure --prefix=$(OUT_PATH)  CC=$(TOOLCHAIN_REL)gcc --enable-shared --enable-static --host=$(shell $(TOOLCHAIN_REL)gcc -dumpmachine);  \
 	$(MAKE) && $(MAKE) install;	\
 	cd -;
-	mkdir -p $(shell pwd)/lib/static
-	cp $(OUT_PATH)/lib/*.a $(shell pwd)/lib/static/ -rf
-	mkdir -p $(shell pwd)/lib/dynamic
-	cp -d -rf $(OUT_PATH)/lib/* $(shell pwd)/lib/dynamic/
+	mkdir -p $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/static
+	cp $(OUT_PATH)/lib/*.a $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/static/ -rf
+	mkdir -p $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/dynamic
+	cp -d -rf $(OUT_PATH)/lib/* $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/dynamic/
 	mkdir -p $(shell pwd)/include
-	cp -rf $(OUT_PATH)/include $(shell pwd)/include
+	cp -rf $(OUT_PATH)/include $(shell pwd)/
 	rm -rf $(OUT_PATH)
