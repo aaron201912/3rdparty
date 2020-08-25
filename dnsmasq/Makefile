@@ -8,6 +8,6 @@ all:
 	cd $(OUT_PATH)/dnsmasq-2.82;	\
 	$(MAKE) install CC=$(TOOLCHAIN_REL)gcc PREFIX=$(OUT_PATH)/;	\
 	cd -;
-	mkdir -p $(shell pwd)/bin/$(TOOLCHAIN_VERSION)
-	cp -rf $(OUT_PATH)/sbin/dnsmasq $(shell pwd)/bin/$(TOOLCHAIN_VERSION)
+	mkdir -p $(shell pwd)/bin/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)
+	cp -rf $(OUT_PATH)/sbin/dnsmasq $(shell pwd)/bin/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)
 	rm -rf $(OUT_PATH)

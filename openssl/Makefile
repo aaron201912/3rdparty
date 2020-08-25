@@ -9,10 +9,10 @@ all:
 	./Configure linux-armv4 --prefix=$(OUT_PATH) CC=$(TOOLCHAIN_REL)gcc;	\
 	$(MAKE) && $(MAKE) install;	\
 	cd -;
-	mkdir -p $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/static
-	cp $(OUT_PATH)/lib/*.a $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/static/ -rf
-	mkdir -p $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/dynamic
-	cp -d -rf $(OUT_PATH)/lib/* $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/dynamic/
+	mkdir -p $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/static
+	cp $(OUT_PATH)/lib/*.a $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/static/ -rf
+	mkdir -p $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/dynamic
+	cp -d -rf $(OUT_PATH)/lib/* $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/dynamic/
 	mkdir -p $(shell pwd)/include
 	cp -rf $(OUT_PATH)/include $(shell pwd)/
 	rm -rf $(OUT_PATH)

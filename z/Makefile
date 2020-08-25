@@ -11,11 +11,11 @@ all:
 	./configure --prefix=$(OUT_PATH);	\
 	$(MAKE) && $(MAKE) install;	\
 	cd -;
-	@mkdir -p $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/static/
-	@mv $(OUT_PATH)/lib/libz.a $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/static/
-	@mkdir -p $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/dynamic/
-	@mv $(OUT_PATH)/lib/libz.so $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/dynamic/
-	@mv $(OUT_PATH)/lib/libz.so.1 $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/dynamic/
-	@mv $(OUT_PATH)/lib/libz.so.1.2.11 $(shell pwd)/lib/$(TOOLCHAIN_VERSION)/dynamic/
+	@mkdir -p $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/static/
+	@mv $(OUT_PATH)/lib/libz.a $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/static/
+	@mkdir -p $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/dynamic/
+	@mv $(OUT_PATH)/lib/libz.so $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/dynamic/
+	@mv $(OUT_PATH)/lib/libz.so.1 $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/dynamic/
+	@mv $(OUT_PATH)/lib/libz.so.1.2.11 $(shell pwd)/lib/$(TOOLCHAIN)/$(TOOLCHAIN_VERSION)/dynamic/
 	@cp $(OUT_PATH)/include $(shell pwd)/ -rf
 	@rm -rf $(OUT_PATH)
