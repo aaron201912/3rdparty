@@ -1,5 +1,6 @@
 .PHONY: all
 OUT_PATH := $(shell pwd)/out
+unexport CROSS_COMPILE
 
 all:
 	rm -rf $(OUT_PATH)
